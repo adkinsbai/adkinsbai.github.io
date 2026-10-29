@@ -5,12 +5,13 @@
 <title>白光宇 — Ideas into reality</title>
 <meta name="description" content="白光宇的 AI 产品展厅。体验 Project Flow、TypeUp、TraceCalendar，了解从想法到完整交付的工程实践。">
 <meta property="og:title" content="白光宇 — 让想法，成为现实"><meta property="og:description" content="已上线 Web 产品、桌面语音工具、能执行的 Agent，以及背后的工程。"><meta property="og:type" content="website"><meta name="theme-color" content="#eeedf2">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=exhibit-2">
-<link rel="preload" href="assets/future-title.woff2?v=exhibit-2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=exhibit-3">
+<link rel="stylesheet" href="interaction.css?v=exhibit-3">
+<link rel="preload" href="assets/future-title.woff2?v=exhibit-3" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 <a class="skip" href="#work">跳到产品</a>
-<header class="masthead"><a class="brand" href="#home" aria-label="白光宇主页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 4v24h12c12 0 12-13 0-13H5m0 0h11c10 0 10-11 0-11H5" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>白光宇<small>GUANGYU BAI</small></span></a><nav aria-label="主导航"><a href="#work">作品</a><a href="#explore">探索</a><a href="#about">关于</a><a href="https://github.com/adkinsbai" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+<header class="masthead"><a class="brand" href="#home" aria-label="白光宇主页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 4v24h12c12 0 12-13 0-13H5m0 0h11c10 0 10-11 0-11H5" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>白光宇<small>GUANGYU BAI</small></span></a><nav aria-label="主导航"><a href="#work">作品</a><a href="#explore">探索</a><a href="#about">关于</a><a href="https://github.com/adkinsbai" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><button class="motion-toggle" type="button" aria-pressed="false">暂停动态效果</button></nav></header>
 <main>
 <section class="opening" id="home" aria-labelledby="opening-title">
  <canvas id="space" aria-hidden="true"></canvas>
@@ -18,35 +19,34 @@
  <div class="exhibit" data-scene="flow">
   <div class="horizon-word" aria-hidden="true">MAKE IT REAL</div>
   <div class="object-stage">
-   <div class="exhibit-object flow-object"><div class="object-toolbar"><i></i><i></i><i></i><span>Project Flow / pmpro.com.cn</span></div><img src="assets/project-flow.png" alt="Project Flow 真实产品界面：节点与项目时间线" fetchpriority="high" width="1400" height="900"></div>
-   <div class="exhibit-object type-object" aria-hidden="true"><div class="mock-top">TypeUp <span>交互结构示意</span></div><div class="voice-orb"><div></div><div></div><div></div></div><strong>说出来。<br>让表达自然发生。</strong><div class="signal-bars" aria-hidden="true"></div><p>语音 → AI 编辑 → 校验 → 写入</p></div>
-   <div class="exhibit-object trace-object" aria-hidden="true"><div class="mock-top">TraceCalendar <span>交互结构示意</span></div><div class="orbit-path" aria-hidden="true"></div><div class="trace-core">计划<br><b>成为行动</b></div><span class="satellite satellite-one">理解需求</span><span class="satellite satellite-two">工具确认</span><span class="satellite satellite-three">写入日程</span></div>
+   <button class="exhibit-object flow-object image-trigger" data-zoom="assets/project-flow.png" data-caption="Project Flow · 仓库提供的真实产品画布" aria-label="查看 Project Flow 完整界面"><span class="object-toolbar"><i></i><i></i><i></i><span>Project Flow / pmpro.com.cn</span></span><img src="assets/project-flow.png" alt="Project Flow 节点与项目时间线" fetchpriority="high" width="1267" height="1117"></button>
+   <button class="exhibit-object type-object image-trigger" data-zoom="assets/typeup-preview.png" data-caption="TypeUp · 本机前端预览，未连接语音引擎" aria-label="查看 TypeUp 完整前端界面" aria-hidden="true" tabindex="-1"><img src="assets/typeup-preview.png" alt="TypeUp 前端首页：语音输入与 AI 编辑快捷键" width="1380" height="800"></button>
+   <button class="exhibit-object trace-object image-trigger" data-zoom="assets/trace-assistant.png" data-caption="TraceCalendar · 本机开发版本 AI 助手空白状态" aria-label="查看 TraceCalendar 完整界面" aria-hidden="true" tabindex="-1"><img src="assets/trace-assistant.png" alt="TraceCalendar AI 助手真实空白界面" width="1418" height="984"></button>
   </div>
-  <span class="object-note">真实界面 · 已上线 Web 产品</span>
+  <div class="exhibit-guidance"><span class="pointer-mark" aria-hidden="true"></span><span class="object-note">移动鼠标探索 · 点击查看完整界面</span></div>
  </div>
  <div class="opening-bottom"><p>不止是一个界面。<br>是从需求、状态和数据，到真正可用的产品。</p><a class="enter-link" href="#work">进入产品展厅 <span aria-hidden="true">↓</span></a><p class="opening-location">电子科学与技术硕士在读<br>AI 全栈 / Agent / 技术产品 · 上海</p></div>
  <div class="scene-selector" role="tablist" aria-label="预览产品"><button role="tab" id="preview-flow" aria-selected="true" data-scene="flow">Project Flow<span>项目规划</span></button><button role="tab" id="preview-type" aria-selected="false" data-scene="type">TypeUp<span>语音与表达</span></button><button role="tab" id="preview-trace" aria-selected="false" data-scene="trace">TraceCalendar<span>Agent 执行</span></button></div>
 </section>
-<section class="flow-chapter" id="work" aria-labelledby="flow-title">
- <div class="flow-pin">
-  <div class="chapter-heading"><h2 id="flow-title">一张画布，<br>如何成为一款产品。</h2><p><b>Project Flow</b><br>把复杂项目，变成可以推进的时间地图。</p><a class="round-link" href="https://pmpro.com.cn" target="_blank" rel="noreferrer" aria-label="访问 Project Flow 官网">↗</a></div>
-  <div class="exploded-stage">
-   <div class="back-plane plane-data"><span>数据与身份</span><strong>Supabase</strong><p>账号 · 用户数据隔离 · 云端保存</p></div>
-   <div class="back-plane plane-commerce"><span>授权与交付</span><strong>Creem</strong><p>会员能力 · 支付回调</p></div>
-   <div class="flow-screen"><div class="object-toolbar"><i></i><i></i><i></i><span>Project Flow · 真实产品界面</span></div><img src="assets/project-flow.png" width="1400" height="900" alt="Project Flow 可视化项目画布" loading="lazy"></div>
-   <div class="flow-callout"><span class="callout-line"></span><p>画布之外，<br><strong>还有完整的交付链路。</strong></p></div>
-  </div>
-  <div class="flow-bottom"><div class="chapter-step" aria-live="polite"><span id="flow-phase">看见计划</span><p id="flow-caption">在节点、分支、截止日期与完成状态之间，找到接下来要做的事。</p></div><div class="chapter-links"><span>独立开发 · 已上线</span><a href="https://github.com/adkinsbai/Project-flow" target="_blank" rel="noreferrer">查看源码 ↗</a></div></div>
-  <div class="flow-ruler" aria-hidden="true"><span></span></div>
+<section class="showcase" id="work" aria-labelledby="showcase-title">
+ <div class="showcase-pin"><div class="showcase-heading"><h2 id="showcase-title">不止做出界面。<br><span>把完整的体验交付出来。</span></h2><p>滚动探索，或直接选择作品。<br><span id="showcase-counter">Project Flow · 1 / 3</span></p></div>
+ <div class="showcase-viewport"><div class="showcase-track">
+ <article class="showcase-panel" data-index="0" style="--distance:0;--depth:0;--visible:1;--copy-visible:1" id="showcase-flow"><figure><button class="image-trigger" data-zoom="assets/project-flow.png" data-caption="Project Flow · 真实产品画布" aria-label="放大 Project Flow 产品界面"><img src="assets/project-flow.png" alt="可视化项目规划画布" width="1267" height="1117"></button><figcaption>真实产品画布 · 点击放大</figcaption></figure><div class="showcase-copy"><h3>Project Flow</h3><p class="showcase-one">让复杂项目，<br>变成可推进的时间地图。</p><p>用节点、分支、截止日期和完成状态组织多条任务线，把计划放进可以持续使用的工作区。</p><dl><div><dt>工程难点</dt><dd>本地与云端编辑冲突、用户数据隔离，以及会员授权与支付回调的一致性。</dd></div><div><dt>交付状态</dt><dd>独立开发 · 已上线 Web 产品</dd></div></dl><a href="https://pmpro.com.cn" target="_blank" rel="noreferrer">体验实际产品 <span aria-hidden="true">↗</span></a></div></article>
+ <article class="showcase-panel" data-index="1" style="--distance:1;--depth:1;--visible:0;--copy-visible:0" id="showcase-type"><figure><button class="image-trigger" data-zoom="assets/typeup-preview.png" data-caption="TypeUp · 本机前端预览，未连接语音引擎" aria-label="放大 TypeUp 前端界面"><img src="assets/typeup-preview.png" alt="TypeUp 语音输入与 AI 编辑前端" width="1380" height="800" loading="lazy"></button><figcaption>本机前端预览 · 未连接语音引擎 · 点击放大</figcaption></figure><div class="showcase-copy"><h3>TypeUp</h3><p class="showcase-one">从你说的话，<br>到正在使用的桌面应用。</p><p>把语音输入、AI 改写和安全写回串成一条表达链路，让文字能够落到光标所在的位置。</p><dl><div><dt>工程难点</dt><dd>Electron / Node / Python 跨进程编排、焦点和原文校验，以及可恢复的替换操作。</dd></div><div><dt>交付状态</dt><dd>独立产品集成 · 公开 v0.1.7 安装包<br>语音通用引擎基于上游开源项目</dd></div></dl><a href="#typeup">体验本页交互演示 <span aria-hidden="true">↓</span></a></div></article>
+ <article class="showcase-panel" data-index="2" style="--distance:2;--depth:2;--visible:0;--copy-visible:0" id="showcase-trace"><figure><button class="image-trigger" data-zoom="assets/trace-assistant.png" data-caption="TraceCalendar · 本机开发版本 AI 助手空白状态" aria-label="放大 TraceCalendar 界面"><img src="assets/trace-assistant.png" alt="TraceCalendar AI 助手首页" width="1418" height="984" loading="lazy"></button><figcaption>本机开发版本 · AI 助手空白状态 · 点击放大</figcaption></figure><div class="showcase-copy"><h3>TraceCalendar</h3><p class="showcase-one">有记忆的助手，<br>也能把需求变成行动。</p><p>围绕真实日程、待办和历史上下文设计桌面 Agent，让工具调用连接到实际业务记录。</p><dl><div><dt>工程难点</dt><dd>调用前确认、真实记录标识、幂等操作日志，以及会话和长期记忆持久化。</dd></div><div><dt>交付状态</dt><dd>独立开发 · 本机 WinUI 3 桌面工程</dd></div></dl><a href="#trace">看看 Agent 如何执行 <span aria-hidden="true">↓</span></a></div></article>
+ </div></div>
+ <div class="showcase-controls" role="tablist" aria-label="选择展厅作品"><button role="tab" id="showcase-tab-0" data-showcase="0" aria-selected="true" aria-controls="showcase-flow"><span>Project Flow</span><small>规划</small><i aria-hidden="true"></i></button><button role="tab" id="showcase-tab-1" data-showcase="1" aria-selected="false" aria-controls="showcase-type"><span>TypeUp</span><small>表达</small><i aria-hidden="true"></i></button><button role="tab" id="showcase-tab-2" data-showcase="2" aria-selected="false" aria-controls="showcase-trace"><span>TraceCalendar</span><small>执行</small><i aria-hidden="true"></i></button></div>
  </div>
 </section>
 <section class="type-chapter" id="typeup" aria-labelledby="type-title">
  <div class="type-intro"><h2 id="type-title">说出来。<br><span>写进去。</span></h2><div><h3>TypeUp</h3><p>按下热键，说出想写的话。让 AI 听写、改写和生成，再安全地写回桌面输入位置。</p><a class="plain-link" href="https://github.com/adkinsbai/typeup/releases/tag/v0.1.7" target="_blank" rel="noreferrer">获取 Windows 安装包 ↗</a></div></div>
+ <figure class="product-evidence"><button class="image-trigger" data-zoom="assets/typeup-preview.png" data-caption="TypeUp · 本机前端预览，未连接语音引擎" aria-label="查看 TypeUp 完整前端"><img src="assets/typeup-preview.png" alt="TypeUp 本机前端首页，展示语音与编辑快捷键" width="1380" height="800" loading="lazy"></button><figcaption>本机前端预览 · 未连接语音引擎 · 点击查看完整界面</figcaption></figure>
  <div class="type-demo"><div class="demo-caption"><span>试一下这条表达链路</span><small>交互演示 · 不采集麦克风，不调用模型</small></div><div class="writing-surface"><span class="writing-label">一段等待表达的想法</span><p id="writing-output" aria-live="polite">我想把脑海里的想法，变成真正能用的产品。</p><span class="writing-caret" aria-hidden="true"></span></div><div class="type-controls"><div class="demo-wave" aria-hidden="true"></div><button id="type-play" class="action-button">体验 AI 改写 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><button id="type-undo" class="undo-button" disabled>撤销改写</button></div></div>
  <div class="engineering-notes"><p><strong>跨进程编排</strong>Electron、Node 与 Python 协同，接住桌面输入和模型处理。</p><p><strong>写入前校验</strong>原文变化、焦点变化都可能导致误替换；校验与撤销让操作可恢复。</p><p><strong>可安装交付</strong>公开 v0.1.7 安装包；语音通用引擎基于上游开源项目。</p></div>
 </section>
 <section class="trace-chapter" id="trace" aria-labelledby="trace-title">
  <div class="trace-header"><h2 id="trace-title">AI 不止回答。<br>也能<span>把事办完。</span></h2><p><b>TraceCalendar</b><br>有记忆、会调用工具的 Windows 日程助手。<br>本机桌面工程 · C# / WinUI 3 / SQLite / MCP</p></div>
+ <figure class="product-evidence trace-evidence"><button class="image-trigger" data-zoom="assets/trace-assistant.png" data-caption="TraceCalendar · 本机开发版本 AI 助手空白状态" aria-label="查看 TraceCalendar 完整界面"><img src="assets/trace-assistant.png" alt="TraceCalendar AI 助手空白界面" width="1418" height="984" loading="lazy"></button><figcaption>真实应用截图 · 本机开发版本 · 不包含私人日程或对话</figcaption></figure>
  <div class="agent-theatre"><div class="request-bubble">“帮我安排一次项目复盘。”<span>交互演示，不创建真实日程</span></div><div class="agent-pipeline"><div class="agent-node" data-agent-step="0"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h20v15H14l-7 5v-5H6zM11 12h10m-10 5h6"/></svg><h3>理解需求</h3><p>上下文与记忆</p></div><span class="pipeline-line" aria-hidden="true"></span><div class="agent-node" data-agent-step="1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m12 6-8 10 8 10m8-20 8 10-8 10m-2-22-4 24"/></svg><h3>选择工具</h3><p>参数与权限</p></div><span class="pipeline-line" aria-hidden="true"></span><div class="agent-node" data-agent-step="2"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h20v21H6zM11 3v8M21 3v8M6 14h20m-14 7 3 3 6-7"/></svg><h3>确认与执行</h3><p>操作记录与去重</p></div></div><div class="agent-result"><div class="result-copy" aria-live="polite"><strong id="agent-status">从一句话，到可检查的行动。</strong><p id="agent-description">执行前确认、真实记录标识与幂等日志，让助手避免重复建任务。</p></div><button id="agent-play" class="action-button">播放执行过程 <span aria-hidden="true">→</span></button></div></div>
  <div class="trace-footer"><p>实现流式回复、工具调用、持久记忆和 MCP 工具发现。<br>本机有工程与发布目录；此处展示产品机制。</p><a class="plain-link" href="https://github.com/adkinsbai" target="_blank" rel="noreferrer">查看公开作品 ↗</a></div>
 </section>
@@ -54,6 +54,7 @@
 <section class="about" id="about" aria-labelledby="about-title"><div class="portrait-wrap"><img src="assets/portrait.jpg" alt="白光宇本人照片" loading="lazy" width="297" height="371"><span>Guangyu Bai</span></div><div class="about-story"><h2 id="about-title">做电路的人，<br>也在构建 AI 产品。</h2><p>我是白光宇。上海科技大学电子科学与技术硕士在读，预计 2027 年毕业。曾在长江存储从事两年模拟 IC 研发，也做过硬科技投资研究与合作创业。</p><p>我用 AI 辅助开发，但需求、交互、边界和验收，需要自己持续判断。从账号与数据，到跨进程状态、真实设备和失败恢复，我在意的是产品能否走完最后一公里。</p><div class="about-directions">AI 全栈 · AI 应用 · Agent 工程 · 技术产品<br><span>工作地点：上海</span></div><a class="action-button" href="https://github.com/adkinsbai" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a></div></section>
 </main>
 <footer><p>下一个想法，<br><strong>正在发生。</strong></p><div><a href="#home">返回顶部 ↑</a><a href="https://github.com/adkinsbai/adkinsbai.github.io" target="_blank" rel="noreferrer">网站源码 ↗</a><span>白光宇 · AI 产品与全栈开发</span></div></footer>
-<div class="page-progress" aria-hidden="true"><span></span></div><button class="motion-toggle" type="button" aria-pressed="false">暂停动态效果</button>
-<script src="projects.js?v=exhibit-2" defer></script><script src="app.js?v=exhibit-2" defer></script>
+<dialog id="image-dialog" aria-labelledby="image-title"><div class="image-dialog-bar"><h2 id="image-title">完整产品界面</h2><button id="image-close" aria-label="关闭完整界面">关闭 <span aria-hidden="true">×</span></button></div><img id="image-full" src="assets/project-flow.png" alt="完整产品界面"><p id="image-caption"></p></dialog>
+<div class="page-progress" aria-hidden="true"><span></span></div>
+<script src="projects.js?v=exhibit-3" defer></script><script src="app.js?v=exhibit-3" defer></script>
 </body></html>
