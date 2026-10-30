@@ -70,3 +70,47 @@ body.motion-paused .showcase-panel .showcase-copy{opacity:1;transform:translateY
 .masthead{mix-blend-mode:normal;color:#201a29;background:#eeedf2ee;backdrop-filter:blur(14px);border-bottom:1px solid #cac7d44d;transition:background .2s,color .2s,border-color .2s}
 .masthead.dark{color:#f0e9f7;background:#12101bee;border-bottom-color:#59436666}
 .opening .object-toolbar,.opening .exhibit-guidance .object-note{font-size:11px!important}.undo-button{font-size:11px!important}
+
+/* Shared optical material: clear margins reveal the scene through the frame.
+   Product screenshots keep their original pixels and readable foreground. */
+:root{--glass-fill:linear-gradient(135deg,#ffffff52,#ffffff12 52%,#c5b5e91c);--glass-edge:#ffffffb8;--glass-shadow:0 24px 56px -32px #35254c66,inset 0 1px 0 #fff9,inset 0 -1px 0 #ffffff35;--glass-blur:24px}
+.opening .exhibit .exhibit-object,
+.showcase .showcase-panel figure .image-trigger,
+.product-evidence .image-trigger,
+.type-demo,.agent-theatre,
+.wall-project .project-visual{
+ background:var(--glass-fill);border:1px solid var(--glass-edge);border-radius:16px;
+ box-shadow:var(--glass-shadow);backdrop-filter:blur(var(--glass-blur)) saturate(145%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(145%);
+}
+.opening .exhibit .exhibit-object{padding:20px;display:flex;flex-direction:column;gap:10px}
+.opening .exhibit .trace-object{background:var(--glass-fill)!important}
+.opening .exhibit .exhibit-object img{flex:1;min-height:0;width:100%;height:100%;border-radius:9px;object-fit:contain}
+.opening .exhibit .flow-object img{height:calc(100% - 38px);filter:none}
+.opening .object-toolbar{flex-shrink:0;background:transparent;color:#51425f;height:24px;padding:0 3px}
+.opening .object-toolbar i{background:#91829e}.opening .object-toolbar span{font-weight:500}
+.showcase,.trace-chapter{--glass-fill:linear-gradient(135deg,#ffffff1c,#d3b6ff09 55%,#9d81c61a);--glass-edge:#e8d4ff38;--glass-shadow:0 24px 56px -32px #0009,inset 0 1px 0 #ffffff28,inset 0 -1px 0 #ffffff0c}
+.showcase-panel figure .image-trigger,.product-evidence .image-trigger{padding:22px}
+.showcase-panel figure img,.product-evidence img{border-radius:8px}
+.type-chapter{background:radial-gradient(ellipse at 10% 25%,#d5c3ee88,transparent 48%),radial-gradient(ellipse at 95% 75%,#cad1e766,transparent 50%),#ece9f3}
+.trace-chapter{background:radial-gradient(ellipse at 85% 40%,#5e42734d,transparent 55%),#171421}
+.type-demo{padding:28px 32px 8px}.writing-surface{padding-left:0;padding-right:0}.demo-caption small,.writing-label{color:#665575}
+.agent-theatre{padding:42px 32px 30px;margin-top:48px}
+.project-wall .wall-project .project-visual{color:#392e4c;background:linear-gradient(135deg,#ffffff75,#ffffff20 58%,#b9abd12b)}
+.wall-project:nth-child(4) .project-visual{color:#343e53}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .opening .exhibit .exhibit-object,.product-evidence .image-trigger,.type-demo,.project-wall .wall-project .project-visual{background:#f1edf7e8}
+ .opening .exhibit .trace-object{background:#f1edf7e8!important}
+ .showcase .showcase-panel figure .image-trigger,.trace-evidence .image-trigger,.agent-theatre{background:#2b2336e8}
+}
+@media(max-width:760px){
+ :root{--glass-blur:16px}
+ .opening .exhibit .exhibit-object{padding:12px;gap:5px}
+ .opening .exhibit .flow-object img{height:calc(100% - 29px)}
+ .showcase-panel figure .image-trigger,.product-evidence .image-trigger{padding:12px}
+ .type-demo{padding:20px 16px 2px}.agent-theatre{padding:28px 16px 22px;margin-top:35px}
+}
+@media(prefers-reduced-transparency:reduce){
+ .opening .exhibit .exhibit-object,.product-evidence .image-trigger,.type-demo,.project-wall .wall-project .project-visual{background:#f1edf7;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .opening .exhibit .trace-object{background:#f1edf7!important}
+ .showcase .showcase-panel figure .image-trigger,.trace-evidence .image-trigger,.agent-theatre{background:#2b2336;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
