@@ -1,0 +1,20 @@
+{
+  "updated": "2026-10-30",
+  "background": {
+    "file": "idea-landscape.png",
+    "method": "Built-in imagegen",
+    "kind": "AI-generated concept art, not a real location or product screenshot",
+    "prompt": "Cinematic landscape 16:9; sculptural translucent glass ribbons and brushed titanium monoliths over a still dark mineral landscape; distant amber horizon, slate-blue shadows and atmospheric fog; broad quiet negative space at left for HTML typography; no people, text, logos, UI, grid or network graphs. Intended as an independent product builder portfolio background, expressing an idea becoming tangible. Slow camera pan and pointer parallax are added by CSS/JavaScript."
+  },
+  "screenshots": [
+    {"file":"project-flow.png","source":"Public adkinsbai/Project-flow repository, website/assets/project-flow-canvas.png","kind":"Actual product canvas"},
+    {"file":"typeup-preview.png","source":"Owner's local TypeUp frontend","kind":"Default frontend preview; speech engine disconnected"},
+    {"file":"trace-assistant.png","source":"Owner's TraceCalendar development QA screenshot","kind":"AI assistant empty state; no private schedule or conversations"},
+    {"file":"qiubi-entry.png","source":"Fresh local browser capture of the owner's built Qiubi app","kind":"Unauthenticated login entrance; no account or private API data"},
+    {"file":"xiaonuan-scene.png","source":"Fresh element screenshot from the owner's Xiaonuan companion frontend","kind":"Offline frontend scene only; backend and physical device not connected"},
+    {"file":"vibeboard-workbench.png","source":"Owner's pre-existing VibeBoard Linux MVP QA screenshot","kind":"Default workbench, hardware preview not deployed"}
+  ],
+  "portrait": {"file":"portrait.jpg","kind":"User-provided photograph"},
+  "not_a_screenshot": {"product":"Enterprise knowledge base","kind":"Code-rendered implementation diagram, explicitly labeled"},
+  "market_analysis": "Official product sources are linked next to each qualitative map. Map placement is the author's interpretation of product focus, not benchmark, ranking, market share or proof of exclusivity."
+}
